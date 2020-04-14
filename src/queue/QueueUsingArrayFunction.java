@@ -1,6 +1,6 @@
 package queue;
 
-public class QueueUsingArray 
+public class QueueUsingArrayFunction 
 {
 	int size;
     

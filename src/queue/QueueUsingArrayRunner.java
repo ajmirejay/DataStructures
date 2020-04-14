@@ -1,10 +1,10 @@
 package queue;
 
-public class QueueRunner {
+public class QueueUsingArrayRunner {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-         QueueUsingArray q = new QueueUsingArray();
+         QueueUsingArrayFunction q = new QueueUsingArrayFunction();
          
          q.getSize();
          q.enQueue(5);

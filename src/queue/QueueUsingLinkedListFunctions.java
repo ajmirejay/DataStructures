@@ -2,11 +2,11 @@ package queue;
 
 import common.Node;
 
-public class QueueUsingLinkedList
+public class QueueUsingLinkedListFunctions
 {
   Node rear, front;
   
-   QueueUsingLinkedList()
+   QueueUsingLinkedListFunctions()
    {
 	   this.rear=this.front=null;
 	   

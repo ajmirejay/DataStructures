@@ -5,7 +5,7 @@ public class QueueUsingLinkedListRunner {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		QueueUsingLinkedList l = new QueueUsingLinkedList();
+		QueueUsingLinkedListFunctions l = new QueueUsingLinkedListFunctions();
 		l.enQueue(1);
 		l.enQueue(2);
 		l.enQueue(3);
