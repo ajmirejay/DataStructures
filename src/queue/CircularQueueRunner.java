@@ -1,4 +1,6 @@
-// time complexity of circular queue is O(1)
+/*The Time Complexity of enqueue and dequeue operation is O(1)
+ * Time Complexity for searching an element is O(n)
+ */
 
 package queue;
 
@@ -12,12 +14,12 @@ public class CircularQueueRunner {
 		
 		c.enQueue(1);
 		c.enQueue(2);
-		c.show();
+		c.displayCircularQueue();
 		c.enQueue(3);
 		c.enQueue(4);
-		c.show();
+		c.displayCircularQueue();
 		c.deQueue();
-		c.show();
+		c.displayCircularQueue();
 		
 		
 		

@@ -51,7 +51,7 @@ public class CircularQueueFunction
        }
    }
   
-   void show()
+   void displayCircularQueue()
    {
 	   
 	  Node n =this.front;

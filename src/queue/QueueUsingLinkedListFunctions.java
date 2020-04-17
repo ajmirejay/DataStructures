@@ -44,7 +44,7 @@ public class QueueUsingLinkedListFunctions
    }
    
    
-   void show()
+   void displayQueue()
    {
 	   Node n= front;
 	   while(n.next!=null)

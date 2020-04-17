@@ -1,3 +1,7 @@
+/*The Time Complexity of enqueue and dequeue operation is O(1)
+ * Time Complexity for searching an element is O(n)
+ */
+
 package queue;
 
 public class QueueUsingLinkedListRunner {
@@ -9,9 +13,9 @@ public class QueueUsingLinkedListRunner {
 		l.enQueue(1);
 		l.enQueue(2);
 		l.enQueue(3);
-		l.show();
+		l.displayQueue();
 		l.deQueue();
-		l.show();
+		l.displayQueue();
 	}
 
 }

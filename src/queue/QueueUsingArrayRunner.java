@@ -4,22 +4,23 @@ public class QueueUsingArrayRunner {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-         QueueUsingArrayFunction q = new QueueUsingArrayFunction();
-         
-         q.getSize();
-         q.enQueue(5);
-         q.enQueue(2);
-         q.enQueue(3);
-         q.enQueue(6);
-         q.enQueue(99);
-         q.enQueue(100);
-         q.getSize();
+		QueueUsingArrayFunctions queue = new QueueUsingArrayFunctions();
+		
+		queue.enQueue(5);
+		queue.enQueue(2);
+		queue.enQueue(7);
+		queue.enQueue(3);
+		queue.show();
+		queue.deQueue();
+		queue.deQueue();
+		queue.show();
+		queue.enQueue(9);
+		queue.enQueue(1);
+		
+		queue.deQueue();
 
-         q.show();
-         q.deQueue();
-         q.show();
-         q.deQueue();
-         q.show();
+		System.out.println("size "+queue.getSize());
+		queue.show();
 	}
 
 }
