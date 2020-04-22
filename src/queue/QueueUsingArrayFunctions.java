@@ -2,64 +2,119 @@ package queue;
 
 public class QueueUsingArrayFunctions
 {
-	int queue[] = new int[5];
-	int size;
-	int front;
-	int rear;
+	int queue[] = new int[10];
+	int front=-1;
+	int rear=-1;
+	int size=0;
 	
-	public void enQueue(int data)
+	void enQueue(int data) 
 	{
-		if(!isFull())
+		
+		if(rear==9) 
 		{
-			queue[rear]=data;
-			rear=(rear+1)%5;
-			size=size+1;
-		}
-		else
 			System.out.println("queue is full");
-	}
-	
-	public int deQueue()
-	{
-		int data= queue[front];
-		if(!isEmpty())
-		{	
 			
-			front=(front+1)%5;
-			size=size-1;
+		}
+		else if(front==-1 && rear==-1)
+			{
+				front=rear=0;
+				queue[rear]=data;
+				size++;
+			
+			}
+		else
+		{
+			
+			rear++;
+			queue[rear]=data;
+			size++;
+		}
+		
+	}
+	
+	void deQueue()
+	{
+		if(front==-1&&rear==-1)
+		{
+			System.out.println("queue is empty");
+		}
+		else if(front==rear) 
+		{
+			front=rear=-1;
+			size--;
 		}
 		else
-			System.out.println("queue is full");
-		return data;
-		
-	}
-	
-	public int getSize()
-	{
-		return size;
-		
-	}
-	
-	public boolean isEmpty()
-	{
-		return getSize()==0;
-		
-	}
-	
-	public boolean isFull()
-	{
-		return getSize()==5;
-		
-	}
-	
-	public void show()
-	{
-		System.out.print("Elements :");
-		for(int i=0;i<size;i++)
 		{
-			System.out.print(queue[(front+i)%5]+" ");
+			int data=queue[front];
+			front++;
+			size--;
+			
+		}
+		
+	}
+	
+	void displayQueue()
+	{
+		if(front==-1&&rear==-1) 
+		{
+			System.out.println("queue is empty");
+			
+		}
+		else 
+		{
+			for(int i=front;i<rear+1;i++)
+			{
+				System.out.print(queue[i]+" ");
+				
+			}
 			
 		}
 		System.out.println();
+
 	}
+	
+	void insertElementAtStart(int data)
+	{
+		if(front==-1&&rear==-1)
+		{
+			enQueue(data);
+		}
+		else if(rear==9)
+			{
+				System.out.println("queue is full");
+			}	
+		else
+		{
+			rear++;
+			for(int i=rear+1;i>0;i--)
+			{
+				queue[i]=queue[i-1];
+			
+			}
+		queue[front]=data;
+		size=size+1;
+		}
+	}
+	
+	boolean searchElementInqueue(int data)
+	{
+		for(int i=front;i<rear+1;i++)
+		{
+			if(queue[i]==data)
+			{
+				return true;
+			}
+		}
+		
+		return false;
+	}
+	
+	int getSize()
+	{
+		
+		return size;
+	}
+	
+	
+	
 }

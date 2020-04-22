@@ -4,23 +4,27 @@
 
 package queue;
 
-public class CircularQueueRunner {
+public class CircularQueueUsingLinkedListRunner {
 
 	public static void main(String[] args)
 	{
 		// TODO Auto-generated method stub
 
-		CircularQueueFunction c = new CircularQueueFunction();
+		CircularQueueUsingLinkedListFunction c = new CircularQueueUsingLinkedListFunction();
 		
 		c.enQueue(1);
 		c.enQueue(2);
-		c.displayCircularQueue();
 		c.enQueue(3);
 		c.enQueue(4);
+		System.out.println("the size of circular queue is "+c.getSize());
 		c.displayCircularQueue();
 		c.deQueue();
 		c.displayCircularQueue();
-		
+		c.updateElementInQueue(4, 87);
+		c.displayCircularQueue();
+		c.searchInQueue(4);
+		System.out.println("the size of circular queue is "+c.getSize());
+
 		
 		
 	}

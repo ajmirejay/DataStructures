@@ -66,7 +66,7 @@ public class StackUsingLinkedlistFunctions
 		{
 			n=n.next;
 			size++;
-		}
+		};
 		size++;
 		return size;
 	}
