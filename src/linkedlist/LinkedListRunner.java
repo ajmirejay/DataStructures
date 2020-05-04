@@ -14,7 +14,7 @@ public class LinkedListRunner {
 		list.insertAtStart(25);          
 		list.insertAT(2,99); 			 
 		list.show();					 
-		list.deleteAt(2);
+		list.deleteAt(5);
 		list.updateElement(1, 75);
 		list.show();
 		System.out.println(list.searchlinkedList(3));

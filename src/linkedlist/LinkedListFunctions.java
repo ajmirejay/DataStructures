@@ -54,7 +54,7 @@ public class LinkedListFunctions
 	   else 
 	   {
 		   Node n =head;
-		   for(int i=2;i<index-1;i++)
+		   for(int i=1;i<index-1;i++)
 		   {
 			   n=n.next;
 		   }	
@@ -67,14 +67,14 @@ public class LinkedListFunctions
    {
 	   if(index==1)
 	   {
-		   head.next=head;
+		   head=head.next;
 		   
 	   }
 	   else
 	   {
 		   Node n=head;
 		   Node n1=null;
-		   for(int i=2;i<index-1;i++)
+		   for(int i=1;i<index-1;i++)
 		   {
 			   n=n.next;
 		   }
