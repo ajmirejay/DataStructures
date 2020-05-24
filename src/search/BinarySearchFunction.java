@@ -3,7 +3,7 @@ package search;
 public class BinarySearchFunction 
 {
 	int [] arr= {5,9,17,23,25,45,59,63,71,89};
-	int n=10;
+	int n=arr.length;
 	
 	void display()
 	{
