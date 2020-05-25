@@ -3,36 +3,38 @@ package sort;
 public class QuickSortFunction {
 	int flagForDisplay = 0;
 
-	void sort(int arr[], int lb, int ub) {
+	void sort(int arr[], int low, int high) {
 		flagForDisplay = 1;
-
-		if (lb < ub) {
-			int loc = quickSort(arr, lb, ub);
-			sort(arr, lb, loc - 1);
-			sort(arr, loc + 1, ub);
-
+		if (low < high) {
+			int pi = partition(arr, low, high);
+			sort(arr, low, pi - 1);
+			sort(arr, pi + 1, high);
 		}
-
 	}
 
-	int quickSort(int arr[], int lb, int ub) {
-		int pivot = arr[ub];
-		int start = lb - 1;
-
-		for (int j = start; j < ub; j++) {
-			if (arr[j] <= pivot) {
+	int partition(int arr[], int low, int high) {
+		int pivot = arr[low];
+		int start = low;
+		int end = high;
+		while (start < end) {
+			while (arr[start] <= pivot && start < high) {
 				start++;
+			}
+			while (arr[end] > pivot && end > low) {
+				end--;
+			}
+			if (start < end) {
 				int temp = arr[start];
-				arr[start] = arr[j];
-				arr[j] = temp;
+				arr[start] = arr[end];
+				arr[end] = temp;
 			}
 		}
 
-			int temp = arr[start+1];
-			arr[start+1] = arr[ub];
-			arr[ub] = temp;
-		
-			return start+1;
+		int temp = arr[low];
+		arr[low] = arr[end];
+		arr[end] = temp;
+
+		return end;
 	}
 
 	void displayArray(int arr[]) {
