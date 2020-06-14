@@ -67,7 +67,7 @@ public class QueueUsingLinkedListFunctions
 	   else
 	   {
 		   Node n = front;
-		   for(int i =2;i<index;i++)
+		   for(int i = 2;i<index;i++)
 		   {
 			   n=n.next;
 			   

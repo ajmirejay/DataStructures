@@ -17,7 +17,7 @@ public class QueueUsingLinkedListRunner {
 		l.deQueue();
 		l.displayQueue();
 		l.insertAtStart(43);
-		l.insertAt(55, 3);
+		l.insertAt(55, 1);
 		l.displayQueue();
 		l.deleteAt(2);
 		l.displayQueue();
